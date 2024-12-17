@@ -11,14 +11,14 @@ app.set("views", templatePath);
 app.use(express.urlencoded({extended:false}));
 
 app.get("/", (req, res)=>{
-    res.render("login");
+    res.render("inicio");
 });
 
-app.get("/signup", (req, res)=>{
-    res.render("signup");
+app.get("/registro", (req, res)=>{
+    res.render("registro");
 });
 
-app.post("/signup", async(req, res)=>{
+app.post("/registro", async(req, res)=>{
     const data = {
         nc:req.body.nc,
         user:req.body.nc,
@@ -27,10 +27,10 @@ app.post("/signup", async(req, res)=>{
 
     await collection.insertMany([data]);
 
-    res.render("login");
+    res.render("inicio");
 });
 
-app.post("/login", async(req, res)=>{
+app.post("/inicio", async(req, res)=>{
 
     try{
         const check = await collection.findOne({user:req.body.user});
