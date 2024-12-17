@@ -31,20 +31,32 @@
     <div class="global-container">
       <div class="card login-form">
         <div class="card-body">
+          <h2>Pagina de alumnos</h2>
           <h2>Inicio de Sesion</h2>
           <div class="card-text">
             <form action="/login" method="post">
 
               <div class="form-group">
-                <label>Usuario</label>
+                <label>Numero de Control</label>
                 <input
                   type="text"
-                  name="nombre"
-                  id="nombre"
-                  placeholder="Nombre"
+                  name="nc"
+                  id="nc"
+                  placeholder="Num.Control"
                   class="form-control form-control-sm" 
                 />
               </div>
+
+              <div class="form-group">
+                <label>Ususario</label>
+                <input
+                  type="text"
+                  name="user"
+                  id="user"
+                  class="form-control form-control-sm" 
+                />
+              </div>
+
               <div class="form-group">
                 <label>Contraseña</label>
                 <input

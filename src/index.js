@@ -20,7 +20,8 @@ app.get("/signup", (req, res)=>{
 
 app.post("/signup", async(req, res)=>{
     const data = {
-        nombre:req.body.nombre,
+        nc:req.body.nc,
+        user:req.body.nc,
         password:req.body.password
     }
 
@@ -32,7 +33,8 @@ app.post("/signup", async(req, res)=>{
 app.post("/login", async(req, res)=>{
 
     try{
-        const check = await collection.findOne({nombre:req.body.nombre});
+        const check = await collection.findOne({user:req.body.user});
+        
 
         if(check.password===req.body.password){
             res.render("home");

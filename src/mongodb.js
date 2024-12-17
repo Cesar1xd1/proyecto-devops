@@ -9,7 +9,11 @@ mongoose.connect("mongodb://localhost:27017/users")
 });
 
 const loginSchema = new mongoose.Schema({
-    nombre:{
+    nc:{
+        type:String,
+        required:true
+    },
+    user:{
         type:String,
         required:true
     },
